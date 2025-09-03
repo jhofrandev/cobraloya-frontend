@@ -6,7 +6,8 @@ export default function AppLayout() {
   return (
     <>
       <Header />
-      <section>
+
+      <section className="min-h-[calc(100vh-128px)] mx-auto mt-5 p-5">
         <Outlet />
       </section>
 
