@@ -15,4 +15,6 @@ createRoot(document.getElementById("root")!).render(
       <ReactQueryDevtools />
     </QueryClientProvider>
   </StrictMode>
+
+  // Add this
 );
