@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { Link } from "react-router-dom";
-import { Description, Field, Input, Label } from "@headlessui/react";
+import { Button, Field, Input, Label } from "@headlessui/react";
 
 export default function CreateClientView() {
   return (
@@ -23,11 +23,11 @@ export default function CreateClientView() {
         </nav>
 
         <form className={clsx("mt-10 p-10 bg-slate-900/50")}>
-          <Field>
-            <Label className="text-sm/6 font-medium text-white">Name</Label>
-            <Description className="text-sm/6 text-white/50">
+          <Field className="mb-5">
+            <Label className="text-sm/6 font-medium text-white">Nombre</Label>
+            {/* <Description className="text-sm/6 text-white/50">
               Use your real name so people will recognize you.
-            </Description>
+            </Description> */}
             <Input
               className={clsx(
                 "mt-3 block w-full rounded-lg border-none bg-white/5 px-3 py-1.5 text-sm/6 text-white",
@@ -35,6 +35,66 @@ export default function CreateClientView() {
               )}
             />
           </Field>
+          <Field className="mb-5">
+            <Label className="text-sm/6 font-medium text-white">
+              Número de Identificación
+            </Label>
+            {/* <Description className="text-sm/6 text-white/50">
+              Use your real name so people will recognize you.
+            </Description> */}
+            <Input
+              className={clsx(
+                "mt-3 block w-full rounded-lg border-none bg-white/5 px-3 py-1.5 text-sm/6 text-white",
+                "focus:not-data-focus:outline-none data-focus:outline-2 data-focus:-outline-offset-2 data-focus:outline-white/25"
+              )}
+            />
+          </Field>
+          <Field className="mb-5">
+            <Label className="text-sm/6 font-medium text-white">
+              Correo Eletronico
+            </Label>
+            {/* <Description className="text-sm/6 text-white/50">
+              Use your real name so people will recognize you.
+            </Description> */}
+            <Input
+              className={clsx(
+                "mt-3 block w-full rounded-lg border-none bg-white/5 px-3 py-1.5 text-sm/6 text-white",
+                "focus:not-data-focus:outline-none data-focus:outline-2 data-focus:-outline-offset-2 data-focus:outline-white/25"
+              )}
+            />
+          </Field>
+          <Field className="mb-5">
+            <Label className="text-sm/6 font-medium text-white">
+              Número Telefonico
+            </Label>
+            {/* <Description className="text-sm/6 text-white/50">
+              Use your real name so people will recognize you.
+            </Description> */}
+            <Input
+              className={clsx(
+                "mt-3 block w-full rounded-lg border-none bg-white/5 px-3 py-1.5 text-sm/6 text-white",
+                "focus:not-data-focus:outline-none data-focus:outline-2 data-focus:-outline-offset-2 data-focus:outline-white/25"
+              )}
+            />
+          </Field>
+          <Field className="mb-5">
+            <Label className="text-sm/6 font-medium text-white">
+              Dirrección
+            </Label>
+            {/* <Description className="text-sm/6 text-white/50">
+              Use your real name so people will recognize you.
+            </Description> */}
+            <Input
+              className={clsx(
+                "mt-3 block w-full rounded-lg border-none bg-white/5 px-3 py-1.5 text-sm/6 text-white",
+                "focus:not-data-focus:outline-none data-focus:outline-2 data-focus:-outline-offset-2 data-focus:outline-white/25"
+              )}
+            />
+          </Field>
+
+          <Button className="block w-full mt-3 rounded-md bg-gray-700 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-inner shadow-white/10 focus:not-data-focus:outline-none data-focus:outline data-focus:outline-white data-hover:bg-gray-600 data-open:bg-gray-700">
+            Registrar
+          </Button>
         </form>
       </div>
     </>
