@@ -10,8 +10,8 @@ export default function Router() {
       <Routes>
         <Route element={<AppLayout />}>
           <Route path="/" element={<DashboardView />} index />
-          <Route path="/clients/create" element={<CreateClientView />} />
-          <Route path="/clients/:clienteId" element={<ClientDetailsView />} />
+          {/* <Route path="/clients/create" element={<CreateClientView />} />
+          <Route path="/clients/:clienteId" element={<ClientDetailsView />} /> */}
         </Route>
       </Routes>
     </BrowserRouter>
