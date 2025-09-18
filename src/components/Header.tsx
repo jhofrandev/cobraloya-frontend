@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
 import ItemNavLink from "./ItemNavLink";
 
 export default function Header() {
@@ -43,25 +42,55 @@ export default function Header() {
           </svg>
         </button>
         <div
-          className={`${isMenuOpen ? "" : "hidden"} w-full md:block md:w-auto`}
+          className={`${isMenuOpen ? "opacity-100 max-h-[500px]" : "opacity-0 max-h-0 overflow-hidden"} w-full md:block md:w-auto md:opacity-100 md:max-h-[500px] transition-all duration-300 ease-in-out`}
           id="navbar-default"
         >
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             <li>
-              <ItemNavLink to="/" title="Inicio" />
+              <ItemNavLink
+                to="/"
+                title="Inicio"
+                isMenuOpen={isMenuOpen}
+                setIsMenuOpen={setIsMenuOpen}
+              />
             </li>
             <li>
-              <ItemNavLink to="/clients" title="Clientes" />
+              <ItemNavLink
+                to="/clients"
+                title="Clientes"
+                isMenuOpen={isMenuOpen}
+                setIsMenuOpen={setIsMenuOpen}
+              />
             </li>
             <li>
-              <ItemNavLink to="/loans" title="Préstamos" />
+              <ItemNavLink
+                to="/loans"
+                title="Préstamos"
+                isMenuOpen={isMenuOpen}
+                setIsMenuOpen={setIsMenuOpen}
+              />
             </li>
             <li>
-              <ItemNavLink to="/payment/register" title="Pagos" />
+              <ItemNavLink
+                to="/payment/register"
+                title="Pagos"
+                isMenuOpen={isMenuOpen}
+                setIsMenuOpen={setIsMenuOpen}
+              />
             </li>
             <li className="flex flex-col gap-2 divide-y divide-gray-300">
-              <ItemNavLink to="/settings" title="Ajustes" />
-              <ItemNavLink to="/login" title="Salir" />
+              <ItemNavLink
+                to="/settings"
+                title="Ajustes"
+                isMenuOpen={isMenuOpen}
+                setIsMenuOpen={setIsMenuOpen}
+              />
+              <ItemNavLink
+                to="/login"
+                title="Salir"
+                isMenuOpen={isMenuOpen}
+                setIsMenuOpen={setIsMenuOpen}
+              />
             </li>
           </ul>
         </div>

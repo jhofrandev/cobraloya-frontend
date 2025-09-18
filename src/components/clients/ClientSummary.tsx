@@ -31,9 +31,9 @@ export default function ClientSummary({
           {name}
         </p>
         <p className="flex gap-1 items-center font-semibold text-xs  text-gray-300 truncate dark:text-gray-400">
-          <div
+          <span
             className={`h-2 w-2 rounded-full ${statusStyles[status]} mt-0.5`}
-          ></div>
+          ></span>
           {status === "active"
             ? "Activo"
             : status === "inArrears"
