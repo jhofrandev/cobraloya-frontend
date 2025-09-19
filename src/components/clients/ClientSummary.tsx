@@ -1,15 +1,10 @@
 import { ChevronRightIcon } from "@heroicons/react/24/solid";
+import { getStatusStyle } from "../../utils/utils";
 
 type ClientSummaryProps = {
   urlImage?: string;
   name: string;
-  status: keyof typeof statusStyles;
-};
-
-const statusStyles: { [key: string]: string } = {
-  active: "bg-green-500",
-  inArrears: "bg-red-500",
-  inactive: "bg-gray-500",
+  status: string;
 };
 
 export default function ClientSummary({
@@ -32,7 +27,7 @@ export default function ClientSummary({
         </p>
         <p className="flex gap-1 items-center font-semibold text-xs  text-gray-300 truncate dark:text-gray-400">
           <span
-            className={`h-2 w-2 rounded-full ${statusStyles[status]} mt-0.5`}
+            className={`h-2 w-2 rounded-full ${getStatusStyle(status)} mt-0.5`}
           ></span>
           {status === "active"
             ? "Activo"

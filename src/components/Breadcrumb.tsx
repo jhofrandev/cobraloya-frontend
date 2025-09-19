@@ -1,10 +1,11 @@
 type BreadcrumbProps = {
   children: React.ReactNode;
+  className?: string;
 };
 
-export default function Breadcrumb({ children }: BreadcrumbProps) {
+export default function Breadcrumb({ children, className }: BreadcrumbProps) {
   return (
-    <nav className="flex px-4 mb-2" aria-label="Breadcrumb">
+    <nav className={`flex px-4 ${className}`} aria-label="Breadcrumb">
       <ol className="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
         <li className="inline-flex items-center">
           <a
