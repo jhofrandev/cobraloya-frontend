@@ -44,41 +44,41 @@ export default function ClientsView() {
             role="list"
             className="divide-y divide-gray-200 dark:divide-gray-700"
           >
-            <li className="px-4 py-4 sm:py-4">
+            <Link to={`/clients/1`} className="px-4 py-4 sm:py-4">
               <ClientSummary
                 name="Neil Sims"
                 urlImage="/avatar-men.png"
                 status="active"
               />
-            </li>
-            <li className="px-4 py-4 sm:py-4">
+            </Link>
+            <Link to={`/clients/2`} className="px-4 py-4 sm:py-4">
               <ClientSummary
                 name="Bonnie Green"
                 urlImage="/avatar-men.png"
                 status="inArrears"
               />
-            </li>
-            <li className="px-4 py-4 sm:py-4">
+            </Link>
+            <Link to={`/clients/3`} className="px-4 py-4 sm:py-4">
               <ClientSummary
                 name="Michael Gough"
                 urlImage="/avatar-men.png"
                 status="inactive"
               />
-            </li>
-            <li className="px-4 py-4 sm:py-4">
+            </Link>
+            <Link to={`/clients/4`} className="px-4 py-4 sm:py-4">
               <ClientSummary
                 name="Lana image"
                 urlImage="/avatar-men.png"
                 status="inArrears"
               />
-            </li>
-            <li className="px-4 pt-4 pb-0 sm:pt-4">
+            </Link>
+            <Link to={`/clients/5`} className="px-4 py-4 sm:py-4">
               <ClientSummary
                 name="Thomes Lean"
                 urlImage="/avatar-men.png"
                 status="active"
               />
-            </li>
+            </Link>
           </ul>
         </div>
       </div>
