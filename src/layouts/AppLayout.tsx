@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import Header from "../components/Header";
+import Header from "../components/header/Header";
 import Footer from "../components/Footer";
 
 export default function AppLayout() {
@@ -7,9 +7,9 @@ export default function AppLayout() {
     <>
       <Header />
 
-      <section className="min-h-[calc(100vh-128px)]">
+      <main className="min-h-[calc(100vh-128px)]">
         <Outlet />
-      </section>
+      </main>
 
       <Footer />
     </>

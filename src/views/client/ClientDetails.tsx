@@ -1,6 +1,12 @@
+import { Link } from "react-router-dom";
+import { ChevronRightIcon } from "@heroicons/react/24/solid";
+
 import Breadcrumb from "../../components/Breadcrumb";
+import { formatCurrency, getStatusStyle } from "../../utils/utils";
 
 export default function ClientDetails() {
+  const status = "active";
+
   return (
     <>
       <Breadcrumb className="mt-2 mb-8">
@@ -50,7 +56,7 @@ export default function ClientDetails() {
         </li>
       </Breadcrumb>
 
-      <div className="mx-4 p-4">
+      <div className="mx-4">
         <div className="flex flex-col items-center pb-10">
           <img
             className="w-24 h-24 mb-3 rounded-full shadow-lg"
@@ -66,7 +72,16 @@ export default function ClientDetails() {
         </div>
       </div>
 
-      <h3 className="mx-4 mb-4 text-lg font-semibold">Acerca de</h3>
+      <Link
+        to="#"
+        className="block focus:outline-none text-white mx-4 mb-4 bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm text-center py-2.5 dark:focus:ring-yellow-900"
+      >
+        Nuevo préstamo
+      </Link>
+
+      <h3 className="mx-4 mb-2 text-lg font-semibold">
+        Información de contacto
+      </h3>
 
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="flex items-center gap-4 mx-4 p-4 rounded-t-lg bg-white dark:bg-gray-800">
@@ -86,7 +101,7 @@ export default function ClientDetails() {
             <p className="text-md font-semibold">+57 3014353</p>
           </div>
         </div>
-        <div className="flex items-center gap-4 mx-4 p-4 rounded-t-lg bg-white dark:bg-gray-800">
+        <div className="flex items-center gap-4 mx-4 p-4 bg-white dark:bg-gray-800">
           <svg
             className="w-6 h-8 text-yellow-400/50"
             aria-hidden="true"
@@ -104,7 +119,7 @@ export default function ClientDetails() {
             <p className="text-md font-semibold">bonnie.green@example.com</p>
           </div>
         </div>
-        <div className="flex items-center gap-4 mx-4 p-4 rounded-t-lg bg-white dark:bg-gray-800">
+        <div className="flex items-center gap-4 mx-4 p-4 rounded-b-lg bg-white dark:bg-gray-800">
           <svg
             className="w-6 h-8 text-yellow-400/50"
             aria-hidden="true"
@@ -124,6 +139,88 @@ export default function ClientDetails() {
             </p>
           </div>
         </div>
+      </div>
+
+      <h3 className="mx-4 mb-2 text-lg font-semibold">
+        Historial de préstamos
+      </h3>
+
+      <div className="flow-root bg-white mx-4 rounded-lg">
+        <ul
+          role="list"
+          className="divide-y divide-gray-200 dark:divide-gray-700"
+        >
+          <li className="p-4">
+            <div className="flex items-center">
+              <div className="flex-1">
+                <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
+                  Préstamo #1
+                </p>
+                <p className="text-sm text-gray-300 truncate dark:text-gray-400">
+                  {`Monto: ${formatCurrency(1300)}`}
+                </p>
+              </div>
+              <span
+                className={`inline-flex items-center ${getStatusStyle(
+                  status
+                )} text-white text-xs px-2.5 py-0.5 rounded-full`}
+              >
+                <span
+                  className={`w-2 h-2 me-1 ${
+                    status === "active"
+                      ? "bg-green-300"
+                      : status === "inArrears"
+                      ? "bg-red-300"
+                      : "bg-gray-300"
+                  } rounded-full`}
+                ></span>
+                {status === "active"
+                  ? "Activo"
+                  : status === "inArrears"
+                  ? "En mora"
+                  : "Pagado"}
+              </span>
+              <div className="ml-2 inline-flex items-center text-base font-semibold text-gray-300 dark:text-white">
+                <ChevronRightIcon className="w-5 h-5" />
+              </div>
+            </div>
+          </li>
+          <li className="p-4">
+            <div className="flex items-center">
+              <div className="flex-1">
+                <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
+                  Préstamo #1
+                </p>
+                <p className="text-sm text-gray-300 truncate dark:text-gray-400">
+                  {`Monto: ${formatCurrency(1000)}`}
+                </p>
+              </div>
+              <span
+                className={`inline-flex items-center ${getStatusStyle(
+                  status
+                )} text-white text-xs px-2.5 py-0.5 rounded-full`}
+              >
+                <span
+                  className={`w-2 h-2 me-1 ${
+                    status === "active"
+                      ? "bg-green-300"
+                      : status === "inArrears"
+                      ? "bg-red-300"
+                      : "bg-gray-300"
+                  } rounded-full`}
+                ></span>
+                {status === "active"
+                  ? "Activo"
+                  : status === "inArrears"
+                  ? "En mora"
+                  : "Pagado"}
+              </span>
+              <div className="ml-2 inline-flex items-center text-base font-semibold text-gray-300 dark:text-white">
+                <ChevronRightIcon className="w-5 h-5" />
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
     </>
   );
