@@ -7,7 +7,7 @@ import Breadcrumb from "../../components/Breadcrumb";
 export default function ClientsView() {
   return (
     <>
-      <Breadcrumb className="py-2 mx-4">
+      <Breadcrumb className="py-2">
         <li aria-current="page">
           <div className="flex items-center">
             <svg

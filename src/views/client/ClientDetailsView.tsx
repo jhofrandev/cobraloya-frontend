@@ -4,7 +4,7 @@ import { ChevronRightIcon } from "@heroicons/react/24/solid";
 import Breadcrumb from "../../components/Breadcrumb";
 import { formatCurrency, getStatusStyle } from "../../utils/utils";
 
-export default function ClientDetails() {
+export default function ClientDetailsView() {
   const status = "active";
 
   return (

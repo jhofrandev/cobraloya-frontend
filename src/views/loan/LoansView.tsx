@@ -3,6 +3,7 @@ import { useState } from "react";
 import Breadcrumb from "../../components/Breadcrumb";
 import TabsLoans from "../../components/loans/TabsLoans";
 import LoanSummary from "../../components/loans/LoanSummary";
+import { Link } from "react-router-dom";
 
 export default function LoansView() {
   const [tabActive, setTabActive] = useState("all");
@@ -50,46 +51,66 @@ export default function LoansView() {
               role="list"
               className="divide-y divide-gray-200 dark:divide-gray-700"
             >
-              <li className="p-4">
-                <LoanSummary
-                  name="Neil Sims"
-                  urlImage="/avatar-men.png"
-                  amount={1000}
-                  status="active"
-                />
-              </li>
-              <li className="p-4">
-                <LoanSummary
-                  name="Bonnie Green"
-                  urlImage="/avatar-men.png"
-                  amount={2000}
-                  status="inArrears"
-                />
-              </li>
-              <li className="p-4">
-                <LoanSummary
-                  name="Michael Gough"
-                  urlImage="/avatar-men.png"
-                  amount={3000}
-                  status="inactive"
-                />
-              </li>
-              <li className="p-4">
-                <LoanSummary
-                  name="Lana Byrd"
-                  urlImage="/avatar-men.png"
-                  amount={4000}
-                  status="active"
-                />
-              </li>
-              <li className="p-4">
-                <LoanSummary
-                  name="Thomas Markus"
-                  urlImage="/avatar-men.png"
-                  amount={5000}
-                  status="inArrears"
-                />
-              </li>
+              <div className="p-4">
+                <Link to={`/loans/1`}>
+                  <LoanSummary
+                    name="Neil Sims"
+                    urlImage="/avatar-men.png"
+                    amount={1000}
+                    status="active"
+                  />
+                </Link>
+              </div>
+              <div className="p-4">
+                <Link to={`/loans/2`}>
+                  <LoanSummary
+                    name="Bonnie Green"
+                    urlImage="/avatar-men.png"
+                    amount={2000}
+                    status="inArrears"
+                  />
+                </Link>
+              </div>
+              <div className="p-4">
+                <Link to={`/loans/2`}>
+                  <LoanSummary
+                    name="Bonnie Green"
+                    urlImage="/avatar-men.png"
+                    amount={2000}
+                    status="inArrears"
+                  />
+                </Link>
+              </div>
+              <div className="p-4">
+                <Link to={`/loans/3`}>
+                  <LoanSummary
+                    name="Michael Gough"
+                    urlImage="/avatar-men.png"
+                    amount={3000}
+                    status="inactive"
+                  />
+                </Link>
+              </div>
+              <div className="p-4">
+                <Link to={`/loans/4`}>
+                  <LoanSummary
+                    name="Lana Byrd"
+                    urlImage="/avatar-men.png"
+                    amount={4000}
+                    status="active"
+                  />
+                </Link>
+              </div>
+              <div className="p-4">
+                <Link to={`/loans/5`}>
+                  <LoanSummary
+                    name="Thomas Markus"
+                    urlImage="/avatar-men.png"
+                    amount={5000}
+                    status="inArrears"
+                  />
+                </Link>
+              </div>
             </ul>
           </div>
         </div>
