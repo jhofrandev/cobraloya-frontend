@@ -76,7 +76,7 @@ export default function TabsLoans({
         </ul>
       </div>
       <Link
-        to="#"
+        to="/loans/register"
         className="block focus:outline-none text-white mx-4 mt-4 bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm text-center px-4 py-2.5 dark:focus:ring-yellow-900"
       >
         Nuevo prestamos

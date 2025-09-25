@@ -33,7 +33,7 @@ export default function ClientsView() {
       </Breadcrumb>
       <SearchInput />
       <Link
-        to="#"
+        to="/clients/register"
         className="block focus:outline-none text-white mx-4 bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm text-center py-2.5 dark:focus:ring-yellow-900"
       >
         Nuevo cliente
