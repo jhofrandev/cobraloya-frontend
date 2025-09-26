@@ -38,7 +38,7 @@ export default function RegisterPaymentView() {
             Seleccionar préstamo
           </label>
           <select className="bg-white border border-gray-200 text-gray-900 text-sm rounded-lg focus:ring-yellow-500 focus:border-yellow-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-yellow-500 dark:focus:border-yellow-500">
-            <option selected>Seleccionar un préstamo</option>
+            <option defaultValue={""}>Seleccionar un préstamo</option>
             <option value="">Thomas</option>
             <option value="US">Miguel Vega</option>
             <option value="CA">Fernando</option>
