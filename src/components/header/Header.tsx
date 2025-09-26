@@ -22,7 +22,7 @@ export default function Header() {
       )}
     >
       <a href="/" className="flex items-center">
-        <span className="self-center whitespace-nowrap text-2xl font-[Asimovian] font-semibold  dark:text-white">
+        <span className="self-center whitespace-nowrap text-2xl lg:text-4xl font-[Asimovian] font-semibold  dark:text-white">
           Cobralo<span className="text-yellow-300">YA!</span>
         </span>
       </a>
@@ -102,7 +102,7 @@ export default function Header() {
           </li>
           <li className="border-t border-gray-300 md:border-none">
             <ItemNavLink
-              to="/login"
+              to="/auth/login"
               title="Salir"
               isMenuOpen={isMenuOpen}
               setIsMenuOpen={setIsMenuOpen}

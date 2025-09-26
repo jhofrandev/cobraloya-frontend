@@ -2,3 +2,10 @@
 @import "flowbite/src/themes/default";
 @plugin "flowbite/plugin";
 @source "../node_modules/flowbite";
+
+@theme {
+  --breakpoint-xss: 10rem;
+  --breakpoint-xs: 20rem;
+  --breakpoint-2xl: 100rem;
+  --breakpoint-3xl: 120rem;
+}

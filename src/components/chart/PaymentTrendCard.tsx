@@ -11,7 +11,7 @@ const data = [
 
 export default function PaymentTrendCard() {
   return (
-    <div className="block p-4 bg-white  rounded-lg shadow-xs hover:bg-gray-100 dark:bg-gray-900  dark:hover:bg-gray-700 dark:shadow-gray-700">
+    <div className="block p-4 lg:p-8 bg-white  rounded-lg shadow-xs hover:bg-gray-100 dark:bg-gray-950  dark:hover:bg-gray-700 dark:shadow-gray-800">
       <h3 className="mb-2 text-sm font-semibold tracking-tight text-gray-300 dark:text-white">
         Tendencia de pagos
       </h3>

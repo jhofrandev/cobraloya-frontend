@@ -10,6 +10,9 @@ import ClientDetailsView from "@/views/client/ClientDetailsView";
 import DetailsLoanView from "@/views/loan/DetailsLoanView";
 import NewClientView from "@/views/client/NewClientView";
 import NewLoanView from "./views/loan/NewLoanView";
+import AuthLayout from "./layouts/AuthLayout";
+import LoginView from "./views/auth/LoginView";
+import RegisterUser from "./views/auth/RegisterUser";
 
 export default function Router() {
   return (
@@ -25,6 +28,10 @@ export default function Router() {
           <Route path="/loans/:loanId" element={<DetailsLoanView />} />
           <Route path="/payment/register" element={<RegisterPaymentView />} />
           <Route path="/settings" element={<SettingsView />} />
+        </Route>
+        <Route element={<AuthLayout />}>
+          <Route path="/auth/login" element={<LoginView />} />
+          <Route path="/auth/register" element={<RegisterUser />} />
         </Route>
       </Routes>
     </BrowserRouter>
