@@ -4,7 +4,7 @@ import { formatCurrency } from "../../utils/utils";
 export default function RegisterPaymentView() {
   return (
     <>
-      <Breadcrumb className="border-t border-t-gray-100 pt-2 pb-4 dark:bg-gray-900">
+      <Breadcrumb className=" pt-2 pb-4">
         <li aria-current="page">
           <div className="flex items-center">
             <svg

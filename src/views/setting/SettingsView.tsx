@@ -5,7 +5,7 @@ import Breadcrumb from "../../components/Breadcrumb";
 export default function SettingsView() {
   return (
     <>
-      <Breadcrumb className="border-t border-t-gray-100 pt-2 pb-4 dark:bg-gray-900">
+      <Breadcrumb className="pt-2 pb-4 mx-4">
         <li aria-current="page">
           <div className="flex items-center">
             <svg
@@ -30,7 +30,9 @@ export default function SettingsView() {
         </li>
       </Breadcrumb>
 
-      <h3 className="mx-4 mb-4 text-lg font-semibold">Notificaciones</h3>
+      <h3 className="mx-4 mb-4 text-lg font-semibold dark:text-white">
+        Notificaciones
+      </h3>
 
       <div className="flex items-center mx-4 rounded-lg p-4 mb-8 bg-white dark:bg-gray-800">
         <div className="flex-1">

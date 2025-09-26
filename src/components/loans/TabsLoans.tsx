@@ -13,7 +13,7 @@ export default function TabsLoans({
 }: TabsLoansProps) {
   return (
     <>
-      <div className="border-b border-gray-200 bg-white dark:border-gray-700">
+      <div className="border-b border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-950">
         <ul
           className={`flex px-4 text-sm font-medium text-center text-gray-400`}
         >
@@ -21,8 +21,8 @@ export default function TabsLoans({
             <button
               className={`inline-block py-2 px-4   ${
                 tabActive === "all"
-                  ? "text-gray-700 border-b-2"
-                  : "hover:border-b-2 hover:border-b-gray-300 hover:text-gray-600"
+                  ? "text-gray-700 border-b-2 dark:text-white"
+                  : "hover:border-b-2 hover:border-b-gray-300 hover:text-gray-600 dark:hover:text-white"
               }`}
               type="button"
               onClick={() => handleTabClick("all")}
@@ -35,8 +35,8 @@ export default function TabsLoans({
             <button
               className={`inline-block py-2 px-4   ${
                 tabActive === "active"
-                  ? "text-gray-700 border-b-2"
-                  : "hover:border-b-2 hover:border-b-gray-300 hover:text-gray-600"
+                  ? "text-gray-700 border-b-2 dark:text-white"
+                  : "hover:border-b-2 hover:border-b-gray-300 hover:text-gray-600 dark:hover:text-white"
               }`}
               type="button"
               onClick={() => handleTabClick("active")}
@@ -49,8 +49,8 @@ export default function TabsLoans({
             <button
               className={`inline-block py-2 px-4   ${
                 tabActive === "inArrears"
-                  ? "text-gray-700 border-b-2"
-                  : "hover:border-b-2 hover:border-b-gray-300 hover:text-gray-600"
+                  ? "text-gray-700 border-b-2 dark:text-white"
+                  : "hover:border-b-2 hover:border-b-gray-300 hover:text-gray-600 dark:hover:text-white"
               }`}
               type="button"
               onClick={() => handleTabClick("inArrears")}
@@ -63,8 +63,8 @@ export default function TabsLoans({
             <button
               className={`inline-block py-2 px-4   ${
                 tabActive === "inactive"
-                  ? "text-gray-700 border-b-2"
-                  : "hover:border-b-2 hover:border-b-gray-300 hover:text-gray-600"
+                  ? "text-gray-700 border-b-2 dark:text-white"
+                  : "hover:border-b-2 hover:border-b-gray-300 hover:text-gray-600 dark:hover:text-white"
               }`}
               type="button"
               onClick={() => handleTabClick("inactive")}

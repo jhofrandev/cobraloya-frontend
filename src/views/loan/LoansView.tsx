@@ -13,7 +13,7 @@ export default function LoansView() {
 
   return (
     <>
-      <Breadcrumb className="bg-white border-t border-t-gray-100 pt-2 pb-4 dark:bg-gray-900">
+      <Breadcrumb className="bg-white border-t border-t-gray-100 pt-2 pb-4 dark:bg-gray-950 dark:border-t-gray-800">
         <li aria-current="page">
           <div className="flex items-center">
             <svg

@@ -100,7 +100,7 @@ export default function Header() {
               setIsMenuOpen={setIsMenuOpen}
             />
           </li>
-          <li className="border-t border-gray-300 md:border-none">
+          <li className="border-t border-gray-300 md:border-none dark:border-gray-700">
             <ItemNavLink
               to="/auth/login"
               title="Salir"

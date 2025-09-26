@@ -1,7 +1,7 @@
 export default function SearchInput() {
   return (
-    <form className="max-w-sm mx-4 mt-2">
-      <div className="relative mb-4">
+    <form className="mt-2 sm:col-span-2 xl:col-span-1">
+      <div className="relative">
         <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
           <svg
             className="w-4 h-4 text-gray-400 dark:text-gray-400"
